@@ -32,7 +32,7 @@ public class teoremaChines {
         }
     }
 
-    private boolean arrayPrimo(int[] div,int n)
+    public boolean arrayPrimo(int[] div,int n)
     {
         boolean primo = true;
 
@@ -70,7 +70,7 @@ public class teoremaChines {
 
     }
 
-    private int teorema(int min, int max, int[] div, int[] resto, int n)
+    public int teorema(int min, int max, int[] div, int[] resto, int n)
     {
 
         int[] colunas = new int[n];
