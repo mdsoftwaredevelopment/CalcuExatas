@@ -1,13 +1,19 @@
 package mdsoftware.development.calcumath;
 
+import java.util.ArrayList;
+
 /**
  * Created by killa on 9/12/2017.
  */
 
+//COMO IMPLEMENTAR: Criar método input onde é lido int min, int max e int n. Após a leitura devem ser criados 2 arrays de int onde o tamanho é n.
+//sera lido n*2 (n vezes 2) de inputs nos arrays(na seguinte sequencia, divisor 1 - resto 1, divisor 2 - resto 2 e etc) após a leitura dos inputs deve ser chamada a funçao arrayPrimo
+//e como input deve ser colocado o array de divisores (sera testado se são primos entre si) e o int n. se a função retornar verdadeira deverá ser chamada a função teorema, caso retorne falso existe um ou mais primos entre
+// si nos divisores.
+
 public class teoremaChines {
 
-
-    private int mdc(int a, int b) {git check-ignore -v -- myFileNotPushed
+    private int mdc(int a, int b) {
         if (b == 0)
             return a;
         else
@@ -160,16 +166,43 @@ public class teoremaChines {
         int i = 0;
 
         System.out.println("Soma final = "+somaFinal);
-        while((somaFinal > max) || (somaFinal < min))
+
+        ArrayList saida = new ArrayList();
+        int aux = somaFinal;
+
+        int j = 0;
+        System.out.println(aux);
+
+        if(aux>min)
         {
-            i = i + 1;
-            somaFinal = congruFinal + (multiDiv * i);
+            while(aux>min){
+                aux = aux - multiDiv;
+            }
 
         }
+        else{
+            while(aux<min){
+                aux = aux + multiDiv;
+            }
+        }
+        while(aux<max){
+            saida.add(aux);
+            aux = aux + multiDiv;
+        }
 
-        System.out.println("Valor final = "+somaFinal);
+        System.out.println(saida);
+
+//        while((somaFinal > max) || (somaFinal < min))
+//        {
+//        	i = i + 1;
+//        	somaFinal = congruFinal + (multiDiv * i);
+//
+//        }
+
+//        System.out.println("Valor final = "+somaFinal);
 
         return somaFinal;
     }
 
 }
+
