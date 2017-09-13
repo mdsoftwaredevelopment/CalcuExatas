@@ -70,7 +70,7 @@ public class teoremaChines {
 
     }
 
-    public int teorema(int min, int max, int[] div, int[] resto, int n)
+    public ArrayList teorema(int min, int max, int[] div, int[] resto, int n)
     {
 
         int[] colunas = new int[n];
@@ -201,7 +201,7 @@ public class teoremaChines {
 
 //        System.out.println("Valor final = "+somaFinal);
 
-        return somaFinal;
+        return saida;
     }
 
 }
