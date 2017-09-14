@@ -16,6 +16,11 @@ public class matematica extends AppCompatActivity {
 
     }
 
+    public void irParaChines(View view){
+        Intent intent = new Intent(this, ActivityTeoremaChines.class);
+        startActivity(intent);
+    }
+
     public void voltar(View view) {
         Intent intent = new Intent(this, Menu.class);
         startActivity(intent);

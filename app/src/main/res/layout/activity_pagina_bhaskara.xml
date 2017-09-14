@@ -123,15 +123,40 @@
         app:layout_constraintTop_toBottomOf="@+id/butResumo" />
 
     <EditText
-        android:id="@+id/editCalc"
-        android:layout_width="wrap_content"
+        android:id="@+id/equaçao"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="dado"
-        android:inputType="numberDecimal"
+        android:hint="Escreva a equação"
+        android:inputType="textPersonName"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/ativarCalc" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="267dp"
+        android:orientation="vertical" />
+
+    <ImageButton
+        android:id="@+id/buscarEQ"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ativarCalc"
-        tools:layout_editor_absoluteX="54dp" />
+        app:srcCompat="@android:drawable/ic_menu_search" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
