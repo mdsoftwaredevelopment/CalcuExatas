@@ -223,6 +223,7 @@ public class teoremaChines {
 
 //        System.out.println("Valor final = "+somaFinal);
 
+//>>>>>>> a538ac5755f039f09baef67c77da5204a5c83dce
         return saida;
     }
 

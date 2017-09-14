@@ -30,14 +30,21 @@
             android:name=".bhaskaraprincipal"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden"/>
-
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ActivityTeoremaChines"
             android:label="@string/title_activity_teorema_chines"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityRelacEuler"
+            android:label="@string/title_activity_euler"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ActivityTotienteEuler"
+            android:label="@string/title_activity_totiente_euler"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

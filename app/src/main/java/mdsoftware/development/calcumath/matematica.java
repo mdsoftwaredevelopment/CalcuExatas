@@ -27,6 +27,16 @@ public class matematica extends AppCompatActivity {
         finish();
     }
 
+    public void irParaRelacEuler(View view){
+        Intent intent = new Intent(this, ActivityRelacEuler.class);
+        startActivity(intent);
+    }
+
+    public void irParaTotienteEuler(View view){
+        Intent intent = new Intent(this, ActivityTotienteEuler.class);
+        startActivity(intent);
+    }
+
     public void irParaDetalhes(View view){
         Intent intent = new Intent(this, bhaskaraprincipal.class);
         startActivity(intent);

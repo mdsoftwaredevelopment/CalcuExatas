@@ -28,7 +28,7 @@ public class TotienteEuler {
         }
     }
     public ArrayList TotienteEuler(int n){
-        ArrayList<Integer> saida = new ArrayList();
+        ArrayList saida = new ArrayList();
         for(int i=1;i<n;i++){
             if(primos(n,i)){
                 saida.add(i);
