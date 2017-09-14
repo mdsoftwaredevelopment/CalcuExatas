@@ -27,13 +27,26 @@ public class TotienteEuler {
             return false;
         }
     }
-    public ArrayList TotienteEuler(int n){
-        ArrayList saida = new ArrayList();
+    public ArrayList<String> TotienteEuler(int n){
+        ArrayList<Integer> saida = new ArrayList<Integer>();
         for(int i=1;i<n;i++){
             if(primos(n,i)){
                 saida.add(i);
             }
         }
-        return saida;
+        ArrayList<String> saidaString = new ArrayList<String>();
+        int aux = saida.size()%3;
+        int aux2 = saida.size()/3;
+
+        for(int i=0;i<aux2*3;i=i+3){
+            saidaString.add(saida.get(i)+" "+saida.get(i+1)+" "+saida.get(i+2));
+        }
+        if(aux==1){
+            saidaString.add(saida.get(saida.size()-1).toString());
+        }
+        if(aux==2){
+            saidaString.add(saida.get(saida.size()-2)+" "+saida.get(saida.size()-1));
+        }
+        return saidaString;
     }
 }
