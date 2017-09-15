@@ -58,6 +58,11 @@ public class ActivityTotienteEuler extends AppCompatActivity {
 
         int numeroN = Integer.parseInt(auxN);
 
+        if (numeroN<=1){
+           Toast.makeText(ActivityTotienteEuler.this, "O número precisa ser maior que 1", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
        ArrayList resultado =  totienteEuler.TotienteEuler(numeroN);
 
         int aux = resultado.size();

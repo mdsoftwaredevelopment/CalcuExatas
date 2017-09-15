@@ -72,6 +72,7 @@ public class ActivityRelacEuler extends AppCompatActivity {
 
 
 
+
             }
 
             @Override
@@ -107,6 +108,11 @@ public class ActivityRelacEuler extends AppCompatActivity {
 
         RelacEuler relacEuler = new RelacEuler();
 
+        if (resposta.equals("O que deseja descobrir?")){
+            Toast.makeText(this, "Você esqueceu de selecionar uma função", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         if (TextUtils.isEmpty(aux1)) {
             Toast.makeText(this, "Você esqueceu de uma informação", Toast.LENGTH_LONG).show();
             return;
@@ -120,6 +126,18 @@ public class ActivityRelacEuler extends AppCompatActivity {
 
         int n1 = Integer.parseInt(dado1.getText().toString().trim());
         int n2 =  Integer.parseInt(dado2.getText().toString().trim());
+
+        if (!(n1 >1)){
+            Toast.makeText(this, "O número digitado deve ser maior que 1", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (!(n2 >1)){
+            Toast.makeText(this, "O número digitado deve ser maior que 1", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
 
         if (resposta.equals("Faces")){
             /*

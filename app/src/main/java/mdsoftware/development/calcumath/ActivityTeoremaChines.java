@@ -117,6 +117,11 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                     return;
                 }
 
+                if (Integer.parseInt(n)<=1){
+                    Toast.makeText(ActivityTeoremaChines.this, "Número de divisores precisa ser maior que 1", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
 
                 calcular(min,max,n);
 
@@ -135,8 +140,15 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                 }
 
 
+
+
                 String hint = (String) detalhes.getHint();
                 if (hint.contains("divisor")){
+
+                    if (Integer.parseInt(detalhes.getText().toString())<1){
+                        Toast.makeText(ActivityTeoremaChines.this, "Divisor precisa ser maior que 1", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
                     divisor.add(Integer.parseInt(detalhes.getText().toString()));
                     detalhes.setHint("Escreva o resto "+ contDiv++);
