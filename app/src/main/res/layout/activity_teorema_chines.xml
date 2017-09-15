@@ -45,7 +45,7 @@
         android:layout_height="65dp"
 
         android:layout_marginTop="0dp"
-        android:background="@drawable/chines_calculadorabotaoNew"
+        android:background="@drawable/chines_calculadorabotaonew"
         android:visibility="visible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
