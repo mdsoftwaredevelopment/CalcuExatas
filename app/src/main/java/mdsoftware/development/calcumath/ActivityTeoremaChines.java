@@ -59,6 +59,7 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                 calc.setVisibility(View.INVISIBLE);
                 imgPassoChines.setVisibility(View.INVISIBLE);
                 basicoChines.setVisibility(View.VISIBLE);
+                enviarDetalhes.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -71,6 +72,7 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                 calc.setVisibility(View.INVISIBLE);
                 imgPassoChines.setVisibility(View.VISIBLE);
                 basicoChines.setVisibility(View.INVISIBLE);
+                enviarDetalhes.setVisibility(View.INVISIBLE);
             }
         });
 

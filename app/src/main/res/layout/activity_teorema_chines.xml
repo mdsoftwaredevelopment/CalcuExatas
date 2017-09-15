@@ -16,41 +16,47 @@
     <Button
         android:id="@+id/resumoChines"
         android:layout_width="0dp"
-        android:layout_height="85dp"
+        android:layout_height="50dp"
 
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/chines_formulabotao"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/botao_formulabase"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <Button
         android:id="@+id/passoChines"
         android:layout_width="0dp"
-        android:layout_height="85dp"
+        android:layout_height="50dp"
 
-        android:layout_marginTop="0dp"
-        android:background="@drawable/chines_passobotao"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/botao_passoapasso"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resumoChines" />
+        app:layout_constraintTop_toBottomOf="@+id/resumoChines"
+        android:layout_marginLeft="75dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginRight="75dp" />
 
     <Button
         android:id="@+id/calcChines"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="50dp"
 
-        android:layout_marginTop="0dp"
-        android:background="@drawable/chines_calculadorabotaonew"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/botao_calculadora"
         android:visibility="visible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passoChines" />
+        app:layout_constraintTop_toBottomOf="@+id/passoChines"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp" />
 
     <EditText
         android:id="@+id/minChines"
@@ -61,7 +67,7 @@
         android:layout_marginTop="7dp"
         android:ems="10"
         android:hint="Digite o número mínimo"
-        android:inputType="textPersonName"
+        android:inputType="number|numberSigned|numberDecimal"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -76,7 +82,7 @@
         android:layout_marginTop="0dp"
         android:ems="10"
         android:hint="Digite o número máximo"
-        android:inputType="textPersonName"
+        android:inputType="number|numberSigned|numberDecimal"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -91,7 +97,7 @@
         android:layout_marginTop="1dp"
         android:ems="10"
         android:hint="Quantos divisores?"
-        android:inputType="textPersonName"
+        android:inputType="number|numberSigned|numberDecimal"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
