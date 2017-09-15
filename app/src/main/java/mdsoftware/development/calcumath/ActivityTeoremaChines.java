@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,11 +22,12 @@ import java.util.ArrayList;
 
 public class ActivityTeoremaChines extends AppCompatActivity {
     EditText min, max, n, detalhes;
-    Button calc, enviarDetalhes;
+    Button calc, enviarDetalhes, passo, butCalculadora, resumoChines;
     ArrayList divisor = new ArrayList();
     ArrayList resto = new ArrayList();
     ListView lv;
     TextView tv;
+    ImageView imgPassoChines, basicoChines;
     int contDiv =1;
     int contRest = 1;
     int contGeral = 0;
@@ -34,7 +36,11 @@ public class ActivityTeoremaChines extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teorema_chines);
 
-
+        basicoChines = (ImageView)findViewById(R.id.basicoChines);
+        resumoChines = (Button)findViewById(R.id.resumoChines);
+        imgPassoChines = (ImageView)findViewById(R.id.imgPassoChines);
+        butCalculadora =  (Button)findViewById(R.id.calcChines);
+        passo = (Button)findViewById(R.id.passoChines);
         min = (EditText)findViewById(R.id.minChines);
         max = (EditText)findViewById(R.id.maxChines);
         n = (EditText)findViewById(R.id.numNChines);
@@ -44,9 +50,47 @@ public class ActivityTeoremaChines extends AppCompatActivity {
         lv = (ListView)findViewById(R.id.listView);
         tv = (TextView)findViewById(R.id.textViewResultado);
 
+        resumoChines.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                min.setVisibility(View.INVISIBLE);
+                max.setVisibility(View.INVISIBLE);
+                n.setVisibility(View.INVISIBLE);
+                calc.setVisibility(View.INVISIBLE);
+                imgPassoChines.setVisibility(View.INVISIBLE);
+                basicoChines.setVisibility(View.VISIBLE);
+            }
+        });
+
+        passo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                min.setVisibility(View.INVISIBLE);
+                max.setVisibility(View.INVISIBLE);
+                n.setVisibility(View.INVISIBLE);
+                calc.setVisibility(View.INVISIBLE);
+                imgPassoChines.setVisibility(View.VISIBLE);
+                basicoChines.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        butCalculadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                min.setVisibility(View.VISIBLE);
+                max.setVisibility(View.VISIBLE);
+                n.setVisibility(View.VISIBLE);
+                calc.setVisibility(View.VISIBLE);
+                imgPassoChines.setVisibility(View.INVISIBLE);
+                basicoChines.setVisibility(View.INVISIBLE);
+            }
+        });
+
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
                 String max, n;
                String min = ((EditText) findViewById(R.id.minChines)).getText().toString();
