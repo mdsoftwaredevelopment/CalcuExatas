@@ -6,6 +6,8 @@ package mdsoftware.development.calcumath;
 //IMPLEMENTAÇÃO: escolher umas das 3 funções de acordo c a escolha do usuario (exemplo, o usuario possui vértice e aresta então necessita das faces como resultado) Dica: implementar usando 3 caixas radio para
 //possibilitar escolher cada uma das situações
 
+//
+
 public class RelacEuler {
     public int F(int v,int a){
         int f;

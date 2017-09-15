@@ -19,6 +19,10 @@ import java.util.ArrayList;
 // a538ac5755f039f09baef67c77da5204a5c83dce
 // si nos divisores.
 
+
+//Divisores devem ser maiores que 1. N>1. Todos os numeros devem ser positivos.
+
+
 public class teoremaChines {
 
     private int mdc(int a, int b) {

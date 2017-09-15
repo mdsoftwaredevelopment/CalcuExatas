@@ -8,6 +8,8 @@ import java.util.ArrayList;
 //IMPLEMENTAÇÃO: chamar totienteEuler com o numero N entrado pelo usuario
 
 
+//O input deve ser maior que 1
+
 public class TotienteEuler {
     private int mdc(int a, int b) {
         if (b == 0)
