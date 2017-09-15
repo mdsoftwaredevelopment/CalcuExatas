@@ -99,7 +99,7 @@ public class bhaskaraprincipal extends AppCompatActivity {
                     return;
                 }
 
-
+// x2 + 12x - 13
 
                 if (eq.contains("x")){
                 //    "   2x² + 5x + 3 = 0 "
@@ -110,7 +110,8 @@ public class bhaskaraprincipal extends AppCompatActivity {
 
               // 2 +5 + 3
 
-                    int a, b, c = 0;
+                    int a, c = 0;
+                    double b;
 
                     try {
                     if (aux[0].trim().equals("-")){
@@ -150,7 +151,7 @@ public class bhaskaraprincipal extends AppCompatActivity {
                         a = 1;
 
                         try {
-                            b = Integer.parseInt(aux[1]);
+                            b = Double.parseDouble(aux[1]);
                         }catch (NumberFormatException j){
                             a = 1;
                             b = 1;
@@ -159,7 +160,7 @@ public class bhaskaraprincipal extends AppCompatActivity {
                     }
 
                     try {
-                        b = Integer.parseInt(aux[1]);
+                        b = Double.parseDouble(aux[1]);
                     }catch (NumberFormatException i){
                         b=1;
                         try {
@@ -178,6 +179,7 @@ public class bhaskaraprincipal extends AppCompatActivity {
                         tv.setVisibility(View.GONE);
                         return;
                     }
+
 
                     double potencia = Math.pow(b,2);
                     double delta =  (4*a*c);
