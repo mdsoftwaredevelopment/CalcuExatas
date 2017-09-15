@@ -60,6 +60,18 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                 imgPassoChines.setVisibility(View.INVISIBLE);
                 basicoChines.setVisibility(View.VISIBLE);
                 enviarDetalhes.setVisibility(View.INVISIBLE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(detalhes.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(n.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(min.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(max.getWindowToken(), 0);
             }
         });
 
@@ -73,6 +85,18 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                 imgPassoChines.setVisibility(View.VISIBLE);
                 basicoChines.setVisibility(View.INVISIBLE);
                 enviarDetalhes.setVisibility(View.INVISIBLE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(detalhes.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(n.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(min.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(max.getWindowToken(), 0);
             }
         });
 
@@ -85,6 +109,20 @@ public class ActivityTeoremaChines extends AppCompatActivity {
                 calc.setVisibility(View.VISIBLE);
                 imgPassoChines.setVisibility(View.INVISIBLE);
                 basicoChines.setVisibility(View.INVISIBLE);
+                enviarDetalhes.setVisibility(View.INVISIBLE);
+                detalhes.setVisibility(View.INVISIBLE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(detalhes.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(n.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(min.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(max.getWindowToken(), 0);
             }
         });
 

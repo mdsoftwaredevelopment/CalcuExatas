@@ -19,7 +19,7 @@ public class bhaskaraprincipal extends AppCompatActivity {
     ImageView textResumo, textPasso;
     ImageButton resumo, calcular;
     Button passo, calc;
-    EditText editCalc, auxEquação;
+    EditText auxEquação;
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,10 @@ public class bhaskaraprincipal extends AppCompatActivity {
                 auxEquação.setVisibility(View.GONE);
                 tv.setVisibility(View.GONE);
 
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(auxEquação.getWindowToken(), 0);
+
        //        textPasso.setVisibility(View.VISIBLE);
                 Log.i("SCRIPT", "ENTROU NO CLick");
             }
@@ -61,7 +65,8 @@ public class bhaskaraprincipal extends AppCompatActivity {
                 calcular.setVisibility(View.VISIBLE);
                 auxEquação.setVisibility(View.VISIBLE);
 
-
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(auxEquação.getWindowToken(), 0);
             }
         });
 
@@ -73,6 +78,8 @@ public class bhaskaraprincipal extends AppCompatActivity {
                 calcular.setVisibility(View.GONE);
                 auxEquação.setVisibility(View.GONE);
                 tv.setVisibility(View.GONE);
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(auxEquação.getWindowToken(), 0);
             }
         });
 
@@ -84,12 +91,15 @@ public class bhaskaraprincipal extends AppCompatActivity {
                 String menor[] = new String[3];
             //   " x² - 5x + 6 = 0 "
 
+                eq = eq.replace("x2","x²");
 
                 if (!(eq.contains("²"))){
                     Toast.makeText(bhaskaraprincipal.this,"Não é uma equação do 2° Grau ",Toast.LENGTH_SHORT).show();
                     tv.setVisibility(View.GONE);
                     return;
                 }
+
+
 
                 if (eq.contains("x")){
                 //    "   2x² + 5x + 3 = 0 "
@@ -311,6 +321,9 @@ public class bhaskaraprincipal extends AppCompatActivity {
                 }
 
   */
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(auxEquação.getWindowToken(), 0);
             }
         });
 
