@@ -228,6 +228,14 @@ public class teoremaChines {
 //        System.out.println("Valor final = "+somaFinal);
 
 //>>>>>>> a538ac5755f039f09baef67c77da5204a5c83dce
+        for(i=0;i<saida.size();i++){
+            int aux2 = (int) saida.get(i);
+            if((aux2<min) || (aux2>max)){
+                saida.remove(i);
+                System.out.println("Erro: "+aux2);
+            }
+
+        }
         return saida;
     }
 
