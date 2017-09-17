@@ -35,6 +35,12 @@ public class Menu extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+                @Override
+                public void onAdFailedToLoad(int i) {
+                    super.onAdFailedToLoad(i);
+                    Intent intent = new Intent(getApplicationContext(), matematica.class);
+                    startActivity(intent);
+                }
             });
         }
     }

@@ -105,10 +105,13 @@
 
     <Button
         android:id="@+id/resultChines"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Enviar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/botao_enviardados"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -116,12 +119,13 @@
 
     <Button
         android:id="@+id/butEnviarDetalhes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="44dp"
-        android:text="Enviar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/botao_enviardados"
+
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,11 +21,17 @@ import android.widget.Toast;
 public class ActivityRelacEuler extends AppCompatActivity {
 
     String[] opçoes = new String[]{"O que deseja descobrir?","Faces","Arestas","Vértices"};
+
     Spinner sp;
     String resposta;
     EditText dado1, dado2;
-    Button calcular;
+
     TextView tv;
+  ImageView imgPasso, imgResumo;
+
+    Button calcular;
+
+    Button calculadora, resumo, passo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +43,97 @@ public class ActivityRelacEuler extends AppCompatActivity {
         sp = (Spinner)findViewById(R.id.spinner);
         sp.setAdapter(adapter);
 
+        calculadora = (Button)findViewById(R.id.calcRelacEuler);
+        resumo = (Button)findViewById(R.id.resumoRelacEuler);
+        passo = (Button)findViewById(R.id.passoRelacEuler);
+
+        imgResumo = (ImageView)findViewById(R.id.imageResumoRelacEuler);
+        imgPasso = (ImageView)findViewById(R.id.imgPassoRelacEuler);
+
         dado1 = (EditText)findViewById(R.id.dadoRelacEuler);
         dado2 = (EditText)findViewById(R.id.dadoRelacEuler2);
         calcular = (Button)findViewById(R.id.calcularRelacEuler);
         tv = (TextView)findViewById(R.id.respostaRelacEuler);
+
+
+        calculadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                sp.setVisibility(View.VISIBLE);
+                dado1.setVisibility(View.VISIBLE);
+                dado2.setVisibility(View.VISIBLE);
+                calcular.setVisibility(View.VISIBLE);
+                tv.setVisibility(View.VISIBLE);
+                imgPasso.setVisibility(View.GONE);
+                imgResumo.setVisibility(View.GONE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(dado1.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(dado2.getWindowToken(), 0);
+
+            }
+        });
+
+        passo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                sp.setVisibility(View.GONE);
+                dado1.setVisibility(View.GONE);
+                dado2.setVisibility(View.GONE);
+                calcular.setVisibility(View.GONE);
+                tv.setVisibility(View.GONE);
+                imgPasso.setVisibility(View.VISIBLE);
+                imgResumo.setVisibility(View.GONE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(dado1.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(dado2.getWindowToken(), 0);
+
+            }
+        });
+
+        resumo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                sp.setVisibility(View.GONE);
+                dado1.setVisibility(View.GONE);
+                dado2.setVisibility(View.GONE);
+                calcular.setVisibility(View.GONE);
+                tv.setVisibility(View.GONE);
+                imgPasso.setVisibility(View.GONE);
+                imgResumo.setVisibility(View.VISIBLE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(dado1.getWindowToken(), 0);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(dado2.getWindowToken(), 0);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

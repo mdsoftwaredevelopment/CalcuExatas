@@ -132,34 +132,31 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Escreva a equação"
-        android:inputType="textPersonName"
 
+
+        android:inputType="textPersonName"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ativarCalc" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
-        app:layout_constraintGuide_begin="267dp"
-        android:orientation="vertical" />
 
     <ImageButton
         android:id="@+id/buscarEQ"
         android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="8dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+
+
+        android:layout_marginRight="100dp"
         android:layout_marginTop="8dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/botao_enviardados"
 
         android:visibility="gone"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ativarCalc"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        app:layout_constraintTop_toBottomOf="@+id/equaçao" />
 
     <TextView
         android:id="@+id/resultadoBhasc"
@@ -174,7 +171,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/equaçao" />
+        app:layout_constraintTop_toBottomOf="@+id/buscarEQ" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
