@@ -12,7 +12,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,7 +23,9 @@ import java.util.List;
 public class ActivityTotienteEuler extends AppCompatActivity {
 
     EditText  n;
-    Button calc, calcular, passo, resumo;
+   Button calculadora, passo, resumo;
+    ImageView imgResumo, imgPasso;
+    Button calc;
     ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,69 @@ public class ActivityTotienteEuler extends AppCompatActivity {
         n = (EditText)findViewById(R.id.numeroEuler);
         calc = (Button)findViewById(R.id.calcularEuler);
         lv = (ListView)findViewById(R.id.lvTotEuler);
+
+        imgResumo = (ImageView)findViewById(R.id.imgTotienteResumo);
+        imgPasso = (ImageView)findViewById(R.id.imgTotientePasso);
+
+
+
+        calculadora = (Button)findViewById(R.id.calcTotEuler);
+        passo = (Button)findViewById(R.id.passoEuler);
+        resumo = (Button)findViewById(R.id.basicTotientEuler);
+
+
+
+
+
+
+
+        calculadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                n.setVisibility(View.VISIBLE);
+                calc.setVisibility(View.VISIBLE);
+                lv.setVisibility(View.VISIBLE);
+                imgPasso.setVisibility(View.GONE);
+                imgResumo.setVisibility(View.GONE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(n.getWindowToken(), 0);
+
+            }
+        });
+
+        passo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                n.setVisibility(View.GONE);
+                calc.setVisibility(View.GONE);
+                lv.setVisibility(View.GONE);
+                imgPasso.setVisibility(View.VISIBLE);
+                imgResumo.setVisibility(View.GONE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(n.getWindowToken(), 0);
+
+            }
+        });
+
+        resumo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                n.setVisibility(View.GONE);
+                calc.setVisibility(View.GONE);
+                lv.setVisibility(View.GONE);
+                imgPasso.setVisibility(View.GONE);
+                imgResumo.setVisibility(View.VISIBLE);
+
+                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(n.getWindowToken(), 0);
+            }
+        });
+
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
