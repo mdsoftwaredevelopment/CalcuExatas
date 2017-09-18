@@ -2,17 +2,21 @@ package mdsoftware.development.calcumath;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -134,18 +138,32 @@ public class ActivityTotienteEuler extends AppCompatActivity {
 
 //        String aux = Integer.toString(resultado.size());
         String aux = (String) resultado.get(0);
-        resultado.remove(0);
+       resultado.remove(0);
 
 
         resultado.add(0, "Existem "+aux+" co-primos de "+numeroN+". Eles são:");
 
-       // ArrayList teste = new ArrayList();
+
+        lv.setOnTouchListener(new View.OnTouchListener() {
+            // Setting on Touch Listener for handling the touch inside ScrollView
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Disallow the touch request for parent scroll on touch of child view
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
 
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(ActivityTotienteEuler.this,android.R.layout.simple_list_item_1,resultado);
         lv.setVisibility(View.VISIBLE);
         lv.setAdapter(arrayAdapter);
 
+
+
+
     }
+
+
 
 }
