@@ -132,7 +132,10 @@ public class ActivityTotienteEuler extends AppCompatActivity {
 
        ArrayList resultado =  totienteEuler.TotienteEuler(numeroN);
 
-        int aux = resultado.size();
+//        String aux = Integer.toString(resultado.size());
+        String aux = (String) resultado.get(0);
+        resultado.remove(0);
+
 
         resultado.add(0, "Existem "+aux+" co-primos de "+numeroN+". Eles são:");
 

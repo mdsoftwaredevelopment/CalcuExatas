@@ -39,15 +39,15 @@ public class TotienteEuler {
         ArrayList<String> saidaString = new ArrayList<String>();
         int aux = saida.size()%3;
         int aux2 = saida.size()/3;
-
+        saidaString.add((Integer.toString(saida.size())));
         for(int i=0;i<aux2*3;i=i+3){
-            saidaString.add(saida.get(i)+" "+saida.get(i+1)+" "+saida.get(i+2));
+            saidaString.add(saida.get(i)+"     -     "+saida.get(i+1)+"     -     "+saida.get(i+2));
         }
         if(aux==1){
             saidaString.add(saida.get(saida.size()-1).toString());
         }
         if(aux==2){
-            saidaString.add(saida.get(saida.size()-2)+" "+saida.get(saida.size()-1));
+            saidaString.add(saida.get(saida.size()-2)+"     -     "+saida.get(saida.size()-1));
         }
         return saidaString;
     }
