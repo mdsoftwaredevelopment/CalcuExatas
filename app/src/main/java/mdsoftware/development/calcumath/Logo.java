@@ -15,12 +15,10 @@ public class Logo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
 
-        new Handler().postDelayed(new Runnable()
-        {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void run()
-            {
-                Intent intent = new Intent(Logo.this, Menu.class);
+            public void run() {
+                Intent intent = new Intent(getApplicationContext(), Menu.class);
                 startActivity(intent);
                 finish();
             }
